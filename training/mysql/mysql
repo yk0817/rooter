@@ -1,3 +1,10 @@
+-- 初期設定；
+ユーザー名：root password: 無し
+ホスト名:localhost
+
+-- mysql: 接続
+mysql -u root -p
+
 -- db作成
 CREATE DATABASE training;
 
