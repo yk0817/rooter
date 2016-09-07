@@ -1,0 +1,31 @@
+-- db作成
+CREATE DATABASE training;
+
+-- db接続
+USE training
+
+
+-- usersというテーブルを作成してください。
+-- カラムは、id,name , gender ,ageです。 idはオートインクリメントの主キーにしてください。
+CREATE TABLE users (id INTEGER NOT NULL AUTO_INCREMENT,name CHAR NOT NULL,age TINYINT NOT NULL,PRIMARY KEY (id));
+-- テーブルのフィールド名確認
+desc users;
+-- テーブルにカラムを追加する
+ALTER TABLE users ADD gender CHAR(1);
+
+-- usersにレコードを一行挿入してください
+INSERT INTO users (name,age,gender) VALUES ('ken','34','M');
+
+-- usersにmeibo.txtの内容を全て入れてください（手作業でinsert文作成で構いません）
+INSERT INTO users (name,age,gender) VALUES ('john','18','M'),('paul','20','M'),('alice','15','F'),('dabid','17','M'),('jasmin','17','F');
+
+-- テーブルのカラム定義を変更
+ALTER TABLE users MODIFY name CHAR(20);
+
+-- 年齢順に並べてselectしてください
+SELECT * FROM users ORDER BY age DESC;
+
+-- 女性のみ抽出してください
+SELECT * FROM users WHERE gender = 'F' ;
+-- 男性のみ抽出して年齢順に並べてください
+SELECT * FROM users WHERE gender = 'M' ORDER BY age DESC;

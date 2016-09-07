@@ -1,0 +1,21 @@
+.right {
+  text-align: right;
+  color:#c98bc8;
+  font-size: 24px;
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+
+}
+.center {
+  text-align: center;
+  color:#4cf93d;
+  font-size: 24px;
+  /*font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;*/
+
+}
+.left {
+  text-align: left;
+  color:#2337e8;
+  font-size: 24px;
+  /*font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;*/
+
+}
