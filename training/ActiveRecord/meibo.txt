@@ -1,0 +1,5 @@
+john	m	18
+paul	m	20
+alice	f	15
+dabid	m	17
+jasmin	f	17

@@ -2,6 +2,8 @@
 ユーザー名：root password: 無し
 ホスト名:localhost
 
+explain 
+
 -- mysql: 接続
 mysql -u root -p
 

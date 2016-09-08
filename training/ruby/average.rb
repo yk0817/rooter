@@ -3,6 +3,7 @@ File.open("meibo.txt","r+") do |f|
   total = 0
   arr = Array.new()
   f.each_line do |file_line|
+    p file_line
     file_line.chomp!
     arr.push(file_line.split("\t")[2].to_i)
     count += 1
