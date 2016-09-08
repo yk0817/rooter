@@ -64,7 +64,6 @@ Naver.delete_all
     row[:view_num] = chumoku.css('div > div > p > span')[0].text
     row[:author] = chumoku.css('div > div > p > a').text
     row[:link] = chumoku.css('div > div > p > a').attribute('href').value
-
     # pp row
 
     Naver.create(row)
