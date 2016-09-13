@@ -11,7 +11,7 @@ require 'net/http'
 hash = {}
 city_hash = []
 
-prefecture = %W(栃木県 群馬県 埼玉県 東京都 千葉県 神奈川県 )
+prefecture = %W(東京都 栃木県 群馬県 埼玉県 千葉県 神奈川県 )
 
 
 

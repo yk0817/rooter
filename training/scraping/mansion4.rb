@@ -19,35 +19,20 @@ mansion_hash = []
 
 json_data.each do |test|
   url = URI.escape(search_url + "?address_key=#{test["address_key"]}")
-  # url = URI.escape(search_url + "?address_key=10202006000")
   uri = URI.parse(url)
-  # pp NET::HTTP.get(uri)
   json = Net::HTTP.get(uri)
-
-  # print json
-
   json_read = JSON.load(json)
-  # pp json_read["total"]
-  # pp json_read["buildings"][0]["name"]
-
-  # print json["total"][0]
-
-  # pp json["total"][1].to_i
-
-  # exit
-  # "result_code":"000","total":1,"buildings":[{"id":"0000000000977335","name":"セレストタワー高崎","zip":"3700831","address_key":"10202006000","pref":"群馬県","city":"高崎市","town":"あら町","house_number":"２０１"}]}
-  # print json
 
   if json_read["total"].to_i >= 1
     print "1"
     hash["name"] = json_read["buildings"][0]["name"]
+    print hash["name"]
+    # 長いためブレーク
+    # break
     mansion_hash << hash
     hash = {}
   end
+  sleep 1
 end
 
 pp mansion_hash
-
-# File.open("./json/city_address.json",'w') do |f|
-#   str = JSON.dump(mansion_hash,f)
-# end
