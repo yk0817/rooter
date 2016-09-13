@@ -34,7 +34,10 @@ print CSV.generate(:force_quotes => true){|csv|
 
   }
 
-
+doc.css(".mdTopMTMList01Item").each{|row|
+  # 絞って表示
+  #  p row.css(".mdTopMTMList01Item").text
+}
   # puts '\'' + chumoku.css('div > h3 > a').text  +
   #     '\',\'' + chumoku.css('div > div > p > span')[0].text +
   #     '\',\'' + chumoku.css('div > div > p > a').text +

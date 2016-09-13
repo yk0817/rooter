@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>シナトラ</title>
+</head>
+<body>
+  <h1>シナトラーーーーーーーー</h1>
+  <form action="" method="post">ポスト
+    <input type="text" name = "post_name">
+    <input type="submit">
+  </form>
+
+  <form action="" method="get">ゲット
+    <input type="text" name="get_name">
+    <input type="submit">
+  </form>
+
+  <% if @get_name %>
+    <div>
+      <%= @get_name %>ゲット
+    </div>
+  <% elsif @post_name %>
+    <div>
+      <%= @post_name %>ポスト
+    </div>
+  <% end %>
+</body>
+</html>
