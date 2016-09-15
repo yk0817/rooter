@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <title>シナトラ</title>
 </head>
 <body>
-  <h1>シナトラーーーーーーーー</h1>
+  <h1>シナトラ</h1>
   <form action="" method="post">ポスト
     <input type="text" name = "post_name">
     <input type="submit">
@@ -18,11 +18,15 @@
 
   <% if @get_name %>
     <div>
-      <%= @get_name %>ゲット
+      ゲットしました。<br>
+      こんにちわ<br>
+      <%= @get_name %>さん
     </div>
   <% elsif @post_name %>
     <div>
-      <%= @post_name %>ポスト
+      ポストしました。<br>
+      こんにちわ<br>
+      <%= @post_name %>さん
     </div>
   <% end %>
 </body>

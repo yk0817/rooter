@@ -2,7 +2,7 @@
 ユーザー名：root password: 無し
 ホスト名:localhost
 
-explain 
+explain
 
 -- mysql: 接続
 mysql -u root -p
@@ -11,7 +11,7 @@ mysql -u root -p
 CREATE DATABASE training;
 
 -- db接続
-USE training
+USE training;
 
 
 -- usersというテーブルを作成してください。

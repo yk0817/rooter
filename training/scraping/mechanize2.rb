@@ -5,13 +5,14 @@ require 'mechanize'
 agent = Mechanize.new
 agent.user_agent_alias = "Mac Safari"
 
-page = agent.get("https://www.rakuten-sec.co.jp/")
+page = agent.get("https://login.yahoo.co.jp/config/login?.src=www&.done=http://www.yahoo.co.jp")
 
 # pp page.forms[2]
 
-form_login = page.forms[2]
-form_login.loginid = "YQUP3685"
-form_login.passwd = "39883988"
+form_login = page.forms[0]
+# pp form_login
+form_login.login = "kenyama00881177@yahoo.co.jp"
+form_login.passwd = "39884516"
 # agent.verify_mode = OpenSSL::SSL::VERIFY_NONE
 # agent.follow_meta_refresh = true
 

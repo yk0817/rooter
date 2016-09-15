@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>都道府県入力</title>
+</head>
+<body>
+  <h1>シナトラ</h1>
+  <form action="" method="post">ポスト
+    氏名：
+    <input type="text" name = "post_name">
+    性別：
+    <input type="radio" name="gender" value="M">男
+    <input type="radio" name="gender" value="F">女<br>
+    都道府県：
+    <select name="pref">
+      <% if @texts %>
+        <% @texts.each do |text| %>
+        <option value = <%= text %> > <%= text %> </option>
+        <% end %>
+      <% end %>
+    </select><br>
+    <input type="submit">
+  </form>
+</body>
+</html>
