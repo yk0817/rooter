@@ -1,0 +1,13 @@
+URL
+https://twitter.com/search?q=%E4%B8%83%E3%81%A4%E3%81%AE%E5%A4%A7%E7%BD%AA&src=typd&lang=ja
+
+curl -Lso- https://goo.gl/Hm7Y89 | grep -o "<strong.*"
+curl -Lso- https://goo.gl/Hm7Y89 | grep -o "<strong\s*class=\"fullname.*"
+
+curl -O -Lso- https://goo.gl/Hm7Y89 | grep -o "<strong>"
+
+-O は出力先
+-Lso-は
+-L -- リダイレクトがあったらリダイレクト先の情報を取る
+-s -- 余計な出力をしない
+-o -- レスポンスボディの出力先を指定する

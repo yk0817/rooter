@@ -1,0 +1,47 @@
+！やるべきこと
+
+過去一週間のタイトルを毎日取得(→２，３日は空いてもOK)、
+ダウンロードをしておく事があります。
+
+/Users/kenyamamoto/twitter
+
+archive_tweet.rb "キーワード" で実行
+
+
+昔の過去のデータをとってくるタイムツイートを取ってくる！(データを取得)
+一週間以上前のデータならカールか、capybaraでやる！
+
+データ取得　キーワード
+必ず、同じタイトルが来るわけではない。
+
+なので、キーワードをこちらである程度設定しておく。
+
+タイトル→キーワード
+
+bundle exec ruby archive_tweet.rb キーワード
+
+9/19 実験 まずはキーワードを増やしてみて実験してみることにする。
+
+SELECT query, COUNT(*) FROM tweets GROUP BY query;
+一時間ごとのパフォーマンス
+SELECT DATE_FORMAT(created_at,'%Y/%m/%d %H') as ymdh , count(created_at) as cnt from tweets group by ymdh;
+
+
+     現タイトル                       キーワード案
+「七つの大罪」                      → "七つの大罪"、"7つの大罪"
+「レガリア The Three Sacred Stars」→ "レガリア The Three Sacred Stars"、"レガリア"、"レガリア　The"
+「PERSONA5 the Animation　-THE DAY BREAKERS-」→ "PERSONA5 the Animation- THE DAY BREAKERS -"→無し、"PERSONA5 the Animation"→無し、"PERSONA5"、"P5アニメ"、"ペルソナ5アニメ"
+「ヘボット!」→"ヘボット!"、"ヘボット！"、"ヘボット"
+「ドリフェス!」→"ドリフェス!"、"ドリフェス！"、"ドリフェス"
+
+
+※疑問点　タイトル通りの公式ツイートだと、普通のデータだけに引っかかるのでは？
+
+取得タイトル案
+
+放送開始日	 タイトル	 放送局/日時	 時間帯フラグ	 平日/休日	 ネット配信フラグ
+2016/08/28(日)	 七つの大罪 聖戦の予兆	 □ TBS系：08/28(日) 17:00～	 夕方	 休日	 0
+2016/09/01(木)	 レガリア The Three Sacred Stars
+2016/09/03(土)	 PERSONA5 the Animation　-THE DAY BREAKERS-
+2016/09/18(日)	 ヘボット!	 □ テレビ朝日系：09/18(日) 07:00～	 朝	 休日	 0
+2016/09/23(金)	 ドリフェス！
