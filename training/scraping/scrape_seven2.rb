@@ -2,7 +2,6 @@ require 'nokogiri'
 require 'pp'
 require 'uri'
 
-
 keyword = "七つの大罪"
 
 url = 'https://twitter.com/search?q=\'#{keyword}\'&src=typd&lang=ja'

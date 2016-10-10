@@ -12,6 +12,9 @@ form_login.CUSTOMER_NICKNAME = "mi-numero@hotmail.co.jp"
 form_login.PASSWORD = "39884516"
 login_page = agent.submit(form_login)
 
+pp login_page
+exit
+
 my_page = Nokogiri::HTML.parse(login_page.body,nil,"shift_jis")
 
 # login後、カートの金額と自分のポイントを表示

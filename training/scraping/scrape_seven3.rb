@@ -14,6 +14,8 @@ encode_url = URI.escape(url)
 
 tests =  `curl  #{encode_url}`
 
+pp tests
+
 print "ヘッダ情報"
 print `curl -I #{encode_url}`
 
